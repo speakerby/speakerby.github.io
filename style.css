@@ -59,12 +59,13 @@ h1 {
 h2 {
   font-family: 'Bevan', cursive;
   font-size: 32px;
-  text-align: center;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -72,10 +73,14 @@ h4 {
   font-family: 'Bevan', cursive;
 }
 
+section {
+  margin-bottom: 50px;
+}
+
 /* HEADER */
 header {
   position: relative;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -84,12 +89,10 @@ header {
   overflow: hidden;
 }
 
-.header-video {
-  width: 100%;
+.bg-header-img {
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: -1;
+  right: 0;
 }
 
 .logo-container {
@@ -98,26 +101,25 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  
-  @media only screen and (max-width: 600px) {
-    flex-wrap: wrap;
-  }
+  z-index: 1;
 }
 
 .logo-container img {
-  width: 240px;
+  width: 200px;
 
   margin-bottom: 10px;
 }
 
-.logo-container span {
+.logo-container > span {
   width: 100%;
-  font-size: 30px;
+  font-size: 24px;
   color: #333;
   margin-bottom: 10px;
 }
 
-.logo {
+.logo span {
+  font-size: 36px;
+  margin-bottom: 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -126,27 +128,14 @@ header {
 }
 
 /* NAV */
-
 .nav-list {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .nav-item {
   margin-right: 20px;
-}
-
-@media only screen and (max-width: 600px) {
-  .logo {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .nav-item {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
 }
 
 .nav-link {
@@ -203,18 +192,43 @@ main {
 }
 
 b {
+  display: block;
   font-family: 'Bevan', cursive;
-  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 
 p {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
   line-height: 1.6;
 }
 
 footer {
   text-align: center;
+}
+
+.lazy-corgi-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  margin-bottom: 20px;
+}
+
+.lazy-corgi-dreams {
+  position: absolute;
+  left: 20%;
+  top: -150%;
+  height: 209px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 50px;
+  background: url('images/cloud.png') no-repeat;
+  font-size: 20px;
 }
 
 /* ITEM */
@@ -291,8 +305,26 @@ footer {
   animation-iteration-count: infinite;
 }
 
-/* CARD */
+/* SECTION SPEAKER IS */
+.section-speaker-is {
+  padding: 0 200px;
+  display: flex;
+}
 
+.section-speaker-is img {
+  height: 350px;
+}
+
+/* SECTION HOW DOES IT WORK */
+.section-how-does-it-work h4 {
+  text-align: center;
+}
+
+.section-how-does-it-work .items {
+
+}
+
+/* CARD */
 .cards-container {
   width: 100%;
   display: flex;
@@ -316,5 +348,22 @@ footer {
 @keyframes float {
   50% {
      transform: translate(0, 20px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-container {
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
