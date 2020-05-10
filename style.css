@@ -77,15 +77,20 @@ section {
   margin-bottom: 50px;
 }
 
+.section-yellow-bg {
+  padding-top: 30px;
+  background-color: #FFD452;
+}
+
 /* HEADER */
 header {
   position: relative;
-  height: 400px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: #F9EE8B;
+  padding: 30px 0;
+  background: #FFD452;
   overflow: hidden;
 }
 
@@ -189,6 +194,7 @@ main {
   max-width: 0 auto;
   width: 100%;
   max-width: 1200px;
+  padding: 20px;
 }
 
 b {
@@ -210,24 +216,24 @@ footer {
 }
 
 .lazy-corgi-container {
-  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .lazy-corgi-dreams {
-  position: absolute;
-  left: 20%;
-  top: -150%;
-  height: 209px;
-  width: 300px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  height: 209px;
+  width: 100%;
   text-align: center;
-  padding-left: 50px;
   background: url('images/cloud.png') no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+  padding-bottom: 50px;
   font-size: 20px;
 }
 
@@ -307,42 +313,103 @@ footer {
 
 /* SECTION SPEAKER IS */
 .section-speaker-is {
-  padding: 0 200px;
   display: flex;
+  justify-content: center;
 }
 
 .section-speaker-is img {
-  height: 350px;
+  height: 300px;
 }
 
 /* SECTION HOW DOES IT WORK */
 .section-how-does-it-work h4 {
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.section-how-does-it-work .items {
+.explanation-items {
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+}
 
+.explanation-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.explanation-item img {
+  margin-bottom: 20px;
+}
+
+.explanation-item span {
+  line-height: 1.4;
+  width: 100%;
 }
 
 /* CARD */
 .cards-container {
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: #F9EE8B;
+  justify-content: space-around;
+  padding: 20px 0px 50px 0px;
 }
 
 .card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   animation: float 3s ease-out infinite;
   background: #fff;
   width: 100%;
-  max-width: 300px;
-  margin: 100px auto;
+  max-width: 280px;
+  margin: 10px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   box-sizing: border-box;
   text-align: center;
   padding: 10px;
+}
+
+.card b {
+  margin: 10px 0;
+}
+
+.card img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.card span {
+  width: 100%;
+}
+
+.card p {
+  font-size: 24px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.contact-section h4 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-section img {
+  width: 300px;
 }
 
 @keyframes float {
@@ -361,9 +428,25 @@ footer {
     margin-bottom: 20px;
   }
 
+  .logo > img {
+    width: 130px;
+  }
+
   .nav-item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .section-speaker-is {
+    flex-wrap: wrap;
+  }  
+  
+  .section-speaker-is > div {
+    width: 100%;
+  }
+
+  .section-speaker-is > img {
     margin-bottom: 20px;
   }
 }
