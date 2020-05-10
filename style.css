@@ -71,6 +71,7 @@ h3 {
 h4 {
   font-size: 30px;
   font-family: 'Bevan', cursive;
+  margin-bottom: 20px;
 }
 
 section {
@@ -324,7 +325,6 @@ footer {
 /* SECTION HOW DOES IT WORK */
 .section-how-does-it-work h4 {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .explanation-items {
@@ -401,15 +401,63 @@ footer {
 
 .contact-section h4 {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .contact-section p {
   max-width: 600px;
   margin: 0 auto;
 }
+
 .contact-section img {
   width: 300px;
+}
+
+.last-section img {
+  width: 180px;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social img {
+  width: 60px;
+  margin: 10px;
+}
+
+/* INPUTS */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 5px;
+  border: 2px solid #58CCFB;
+  border-radius: 20px;
+  margin: 0 auto 20px auto;
+  font-family: 'Coming Soon', cursive;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 @keyframes float {
