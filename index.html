@@ -10,20 +10,20 @@
 <body>
   <header>
     <div class="logo-container">
-      <div class="logo">
-        <img src="/images/logo.png" alt="Logo">
-        <span>Speaker</span>
+      <div class="logo-text">
+        <div class="logo-text__main"><span>Speaker <img class="logo-image" src="/images/logo.png" alt="Logo"></span></div>
+        <div class="logo-text__subtitle">Online English </br> Lessons</div>
       </div>
-      <span>Start your journey to the English-speaking world</span>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Check your level</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Prices</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
-        </ul>
-      </nav>
+      <div class="logo-description">Schedule classes & start speaking</div>
     </div>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#test">Check your level</a></li>
+        <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
     <!-- <img class="bg-header-img" src="images/bg-header.jpg" alt="Communication"> -->
   </header>
   <main>
@@ -34,14 +34,15 @@
       </div>
       <h1>Boost spoken English now.</h1>
       <h3>Learn at your own convenience.</h3>
-      <a class="item"><span class="button-jittery">What's it all about?</span></a>
+      <img class="arrow" src="images/arrow.jpg" alt="arrow">
+      <div class="flag"><span>What's it all about?</span></div>
     </section>
     <section class="container section-speaker-is" id="about">
       <img src="images/empire-state-building.png" alt="Empire state building">
       <div>
         <h2>Speaker is ...</h2>
         <b>Online language lessons focused on practicing modern colloquial English.</b>
-        <p>Have you been waiting for the right moment to have speaking practise? Make it today.</p>
+        <p>Have you been waiting for the right moment to have speaking practice? Make it today.</p>
         <p>This is a great chance to enrich your vocabulary, start using expressions that you hear in movies, finally be able to joke in English and talk slang.</p>
         <p>I bet you think something like "Are you nuts?  I can't even have a conversation in English,  leave alone joking." Don't you?</p>
         <p>Why don't you take the test and have a free lesson to see that you can do all of it? Give it a shot! </p>
@@ -51,27 +52,30 @@
       <h4>How does it work?</h4>
       <div class="explanation-items">
         <div class="explanation-item">
-          <img src="images/test.png" alt="Online test">
+          <!-- <img src="images/test.png" alt="Online test"> -->
+          <img class="step-image" src="images/statue-of-liberty.png" alt="Statue of Liberty">
           <span>
             1. Try our online test to find out what stage of language learning you are at
           </span>
         </div>
         <div class="explanation-item">
-          <img src="images/schedule.png" alt="Book lesson">
+          <!-- <img src="images/schedule.png" alt="Book lesson"> -->
+          <img  class="step-image" src="images/central-park.png" alt="Central park">
           <span>
             2. Book the 1st free online lesson
           </span> 
         </div>
         <div class="explanation-item">
-          <img src="images/choose.png" alt="Choose package">
+          <!-- <img src="images/choose.png" alt="Choose package"> -->
+          <img class="step-image" src="images/white-house.png" alt="White house">
           <span>
-            3. Choose the most suitable lesson package and start having English speaking practise
+            3. Choose the most suitable lesson package and start having English speaking practice
           </span>
         </div>
       </div>
-      <a class="item"><span class="button-jittery">Let's take the test</span></a>
+      <a class="item"><span id="test" class="button-jittery" style="font-size: 24px;">Let's take the test</span></a>
     </section>
-    <section class="full-width section-yellow-bg">
+    <section id="prices" class="full-width section-yellow-bg">
       <h4>Choose one of the lesson packages that suits you best</h4>
       <div class="cards-container">
         <div class="card">
@@ -81,6 +85,12 @@
           <p class="price">
             120 BYN
           </p>
+          <div class="sub-price">
+            160 BYN
+            <div class="anim">
+              <span class="tooltip" data-tooltip="You can also have lessons in mini-groups of two people.">?</span>
+            </div>
+          </div>
         </div>
         <div class="card">
           <b>Smart cookie</b>
@@ -89,6 +99,12 @@
           <p class="price">
             220 BYN
           </p>
+          <div class="sub-price">
+            320 BYN
+            <div class="anim">
+              <span class="tooltip" data-tooltip="You can also have lessons in mini-groups of two people.">?</span>
+            </div>
+          </div>
         </div>
         <div class="card">
           <b>Go-getter</b>
@@ -97,6 +113,12 @@
           <p class="price">
             320 BYN
           </p>
+          <div class="sub-price">
+            480 BYN
+            <div class="anim">
+              <span class="tooltip" data-tooltip="You can also have lessons in mini-groups of two people.">?</span>
+            </div>
+          </div>
         </div>
         <div class="card">
           <b>Chatterbox</b>
@@ -105,6 +127,12 @@
           <p class="price">
             430 BYN
           </p>
+          <div class="sub-price">
+            640 BYN
+            <div class="anim">
+              <span class="tooltip" data-tooltip="You can also have lessons in mini-groups of two people.">?</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -112,7 +140,7 @@
       <h4>Not sure what to choose?</h4>
       <p>Speaker offers personilized language lessons to help you meet your goals. Let us help you find the perfect course for you based on your preferences. Tell us if you want to talk about wide range of topics, learn through tv-shows or music, brush up you grammar or prepare for a job interview.</p>
       <img src="images/mouth.png" alt="Mouth">
-      <form action="#">
+      <form id="contacts" action="#">
         <h4>Contact us</h4>
         <div class="input-wrapper">
           <input type="text" placeholder="Name">
@@ -138,15 +166,15 @@
       <p>It's now or never.</p>
       <img src="images/singer.png" alt="Singer">
       <div class="social">
-        <a href="tel:+375293874958">​
+        <!-- <a href="tel:+375293874958">​
           <img src="images/phone.png" alt="Phone">
-        </a>
+        </a> -->
         <a href="https://instagram.com/speaker.by" target="blank">
           <img src="images/instagram.png" alt="Instagram">
         </a>
       </div>
+      <div class="rights">© 2020 All rights are reserved</div>
     </section>
-    <footer>© 2020 All rights are reserved</footer>
   </main>
 </body>
 </html>
