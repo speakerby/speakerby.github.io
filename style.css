@@ -493,24 +493,27 @@ footer {
 }
 
 /* INPUTS */
-form {
+#contacts-form {
   display: flex;
   flex-wrap: wrap;
-}
-
-.input-wrapper {
-  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 input, textarea {
   width: 100%;
-  max-width: 300px;
-  padding: 10px;
+  padding: 10px 15px;
   border: 2px solid #58CCFB;
   border-radius: 20px;
-  margin: 0 auto 20px auto;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Coming Soon', cursive;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 textarea {
@@ -519,6 +522,25 @@ textarea {
 
 input:focus, textarea:focus {
   outline: none;
+}
+
+.input-label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.input-label__required {
+  position: relative;
+  padding-left: 14px;
+}
+
+.input-label__required:before {
+  position: absolute;
+  display: block;
+  color: red;
+  content: '*';
+  left: 0;
 }
 
 footer {
@@ -644,4 +666,50 @@ header {
     width: 300px;
     height: 200px;
   }
+}
+
+.loading {
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+  cursor: auto;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: -3px;
+  border-radius: 50%;
+  border: 6px solid #8c8c8c;
+  border-color: #8c8c8c transparent #8c8c8c transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact-status {
+  line-height: 1.5;
+  font-family: 'Bevan', cursive;
+}
+
+.contact-status__success {
+  color: #58CCFB;
+}
+
+.contact-status__failure {
+  color: #E66253;
 }

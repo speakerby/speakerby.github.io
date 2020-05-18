@@ -139,24 +139,34 @@
       <h4>Not sure what to choose?</h4>
       <p>Speaker offers personilized language lessons to help you meet your goals. Let us help you find the perfect course for you based on your preferences. Tell us if you want to talk about wide range of topics, learn through tv-shows or music, brush up you grammar or prepare for a job interview.</p>
       <img src="images/mouth.jpg" alt="Mouth">
-      <form id="contacts" action="#">
+      <form id="contacts-form" action="#">
         <h4>Contact us</h4>
         <div class="input-wrapper">
-          <input type="text" placeholder="Name">
+          <label class="input-label input-label__required" for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required value="John">
         </div>
         <div class="input-wrapper">
-          <input type="text" placeholder="Last Name">
+          <label class="input-label input-label__required" for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required value="Doe">
         </div>
         <div class="input-wrapper">
-          <input type="email" placeholder="Email Name">
+          <label class="input-label input-label__required" for="email">Email</label>
+          <input type="email" id="email" name="email" required value="loonskai@gmail.com">
         </div>
         <div class="input-wrapper">
-          <input type="text" placeholder="Phone Number">
+          <label class="input-label input-label__required" for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" required value="test">
         </div>
         <div class="input-wrapper">
-          <textarea name="comment" id="contact-comment" cols="30" rows="5" placeholder="Why do you need English practice?"></textarea>
+          <label class="input-label" for="message">Why do you need English practice?</label>
+          <textarea id="message" name="message" cols="30" rows="5"></textarea>
         </div>
-        <button type="submit" class="item"><span class="button-jittery">Send</span></button>
+        <button type="submit" class="item" id="submitButton">
+          <div id="button-spinner" style="display: none;" class="lds-dual-ring"></div>
+          <span id="button-text" class="button-jittery">Send</span>
+        </button>
+        <span style="display: none;" id="contact-success" class="contact-status contact-status__success">Thank  you! We will contact you soon</span>
+        <span style="display: none;" id="contact-failure" class="contact-status contact-status__failure">Oops, something went wrong. Please call us back</span>
       </form>
     </section>
     <section class="full-width section-yellow-bg last-section">
@@ -177,5 +187,6 @@
       <div class="rights">© 2020 All rights are reserved</div>
     </section>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>
