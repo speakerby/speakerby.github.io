@@ -476,11 +476,19 @@ footer {
 }
 
 .social {
-  margin-top: 20px;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.social-link {
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social img {
-  width: 60px;
+  width: 40px;
   margin: 10px;
 }
 
@@ -497,10 +505,11 @@ form {
 input, textarea {
   width: 100%;
   max-width: 300px;
-  padding: 10px 5px;
+  padding: 10px;
   border: 2px solid #58CCFB;
   border-radius: 20px;
   margin: 0 auto 20px auto;
+  font-size: 16px;
   font-family: 'Coming Soon', cursive;
 }
 
@@ -579,7 +588,7 @@ header {
   align-items: center;
   margin: 0 auto;
   width: 400px;
-  height: 267px;
+  height: 259px;
   background-image: url('images/flag.jpg');
   background-position: inherit;
   background-size: contain;
@@ -589,7 +598,7 @@ header {
 
 .flag span {
   font-size: 24px;
-  padding: 5px;
+  padding: 8px;
   background-color: #fff;
   color: #333;
 }
