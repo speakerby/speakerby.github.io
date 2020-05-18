@@ -51,7 +51,6 @@ contactsForm.addEventListener('submit', e => {
   setTimeout(() => {
     sendSuccess();
     clearValues(e.target);
-
     // sendFailure();
   }, 1000);
 });

@@ -50,7 +50,7 @@ body {
 }
 
 main {
-  background-image: url('images/bg.jpg');
+  background-image: url('../images/bg.jpg');
 }
 
 h1 {
@@ -200,7 +200,7 @@ footer {
   height: 209px;
   width: 100%;
   text-align: center;
-  background: url('images/cloud.png') no-repeat;
+  background: url('../images/cloud.png') no-repeat;
   background-position: 50% 0;
   background-size: contain;
   padding-bottom: 50px;
@@ -611,7 +611,7 @@ header {
   margin: 0 auto;
   width: 400px;
   height: 259px;
-  background-image: url('images/flag.jpg');
+  background-image: url('../images/flag.jpg');
   background-position: inherit;
   background-size: contain;
   font-family: 'Bevan', cursive;
