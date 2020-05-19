@@ -19,7 +19,7 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 
 function clean() {
-  return del(['build']);
+  return del(['docs']);
 } 
 
 function styles() {
@@ -32,13 +32,13 @@ function styles() {
     }))
     .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     .pipe(csso())
-    .pipe(dest('./build/css'));
+    .pipe(dest('./docs/css'));
 } 
 
 function scripts() {
   return src('./src/js/**/*.js')
   .pipe(terser())
-  .pipe(dest('./build/js'));
+  .pipe(dest('./docs/js'));
 } 
 
 function pages() {
@@ -47,17 +47,17 @@ function pages() {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(dest('./build'));
+    .pipe(dest('./docs'));
 } 
 
 function images() {
   return src('./src/tinified-images/**/*')
-    .pipe(dest('./build/images'));
+    .pipe(dest('./docs/images'));
 }
 
 function assets() {
   return src(['./src/favicon.ico', './src/site.webmanifest'])
-    .pipe(dest('./build'));
+    .pipe(dest('./docs'));
 }
 
 exports.default = series(clean, styles, scripts, pages, images, assets);
