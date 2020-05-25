@@ -1,5 +1,5 @@
 const SENDGRID_TOKEN = '';
-const contactsForm = document.getElementById('contacts-form');
+const contactsForm = document.getElementById('contacts');
 const submitButton = document.getElementById('submitButton');
 const buttonSpinner = document.getElementById('button-spinner');
 const buttonText = document.getElementById('button-text');

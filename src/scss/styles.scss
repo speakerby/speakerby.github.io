@@ -444,8 +444,8 @@ footer {
 
 .anim {
   position: absolute;
-  top: -4px;
-  right: 77px;
+  top: -10px;
+  right: 63px;
 }
 
 .anim:hover {
@@ -528,19 +528,19 @@ input:focus, textarea:focus {
   width: 100%;
   text-align: left;
   margin-bottom: 8px;
-}
 
-.input-label__required {
-  position: relative;
-  padding-left: 14px;
-}
+  &__required {
+    position: relative;
+    padding-left: 14px;
+  }
 
-.input-label__required:before {
-  position: absolute;
-  display: block;
-  color: red;
-  content: '*';
-  left: 0;
+  &__required:before {
+    position: absolute;
+    display: block;
+    color: red;
+    content: '*';
+    left: 0;
+  }
 }
 
 footer {
@@ -568,30 +568,31 @@ header {
 
 .logo-text {
   font-family: 'Bevan', cursive;
+
+  &__main {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__main span {
+    position: relative;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 }
 
-.logo-text__main {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.logo-text__main span {
-  position: relative;
-}
 
 .logo-image {
   position: absolute;
   right: -90px;
   top: -40px;
   width: 100px;
-}
-
-.logo-text__subtitle {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
 }
 
 .logo-description {
@@ -616,13 +617,13 @@ header {
   background-size: contain;
   font-family: 'Bevan', cursive;
   color: #fff;
-}
 
-.flag span {
-  font-size: 24px;
-  padding: 8px;
-  background-color: #fff;
-  color: #333;
+  & span {
+    font-size: 24px;
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+  }
 }
 
 /* TABLET */
@@ -678,18 +679,18 @@ header {
   display: inline-block;
   width: 24px;
   height: 24px;
-}
 
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin: -3px;
-  border-radius: 50%;
-  border: 6px solid #8c8c8c;
-  border-color: #8c8c8c transparent #8c8c8c transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+  &:after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: -3px;
+    border-radius: 50%;
+    border: 6px solid #8c8c8c;
+    border-color: #8c8c8c transparent #8c8c8c transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
 }
 
 @keyframes lds-dual-ring {
@@ -704,12 +705,16 @@ header {
 .contact-status {
   line-height: 1.5;
   font-family: 'Bevan', cursive;
+
+  &__success {
+    color: #58CCFB;
+  }
+
+  &__failure {
+    color: #E66253;
+  }
 }
 
-.contact-status__success {
-  color: #58CCFB;
-}
-
-.contact-status__failure {
-  color: #E66253;
+.duration {
+  font-family: 'Bevan', cursive;
 }
