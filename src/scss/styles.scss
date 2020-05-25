@@ -564,6 +564,7 @@ header {
 
 .logo-container {
   padding-top: 40px;
+  color: #000000;
 }
 
 .logo-text {
@@ -614,7 +615,7 @@ header {
   height: 259px;
   background-image: url('../images/flag.jpg');
   background-position: inherit;
-  background-size: contain;
+  background-size: cover;
   font-family: 'Bevan', cursive;
   color: #fff;
 
@@ -638,6 +639,7 @@ header {
   }
 
   .nav-list {
+    color: #000000;
     flex-wrap: wrap;
   }
 

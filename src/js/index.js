@@ -49,8 +49,8 @@ contactsForm.addEventListener('submit', e => {
   enableLoading();
   console.log(values);
   setTimeout(() => {
-    sendSuccess();
+    // sendSuccess();
+    sendFailure();
     clearValues(e.target);
-    // sendFailure();
   }, 1000);
 });
