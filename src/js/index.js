@@ -1,56 +1,62 @@
-const SENDGRID_TOKEN = '';
-const contactsForm = document.getElementById('contacts');
-const submitButton = document.getElementById('submitButton');
-const buttonSpinner = document.getElementById('button-spinner');
-const buttonText = document.getElementById('button-text');
-const contactSuccessMessage = document.getElementById('contact-success');
-const contactFailureMessage = document.getElementById('contact-failure');
+window.addEventListener('load', () => {
+  const contactsForm = document.getElementById('contacts');
+  const submitButton = document.getElementById('submitButton');
+  const buttonSpinner = document.getElementById('button-spinner');
+  const buttonText = document.getElementById('button-text');
+  const contactSuccessMessage = document.getElementById('contact-success');
+  const contactFailureMessage = document.getElementById('contact-failure');
 
-const formElements = [...contactsForm.elements]; 
-const getValues = ({ elements }) => [...elements].reduce(
-  (acc, el) => ['INPUT', 'TEXTAREA'].includes(el.tagName) 
-  ? { ...acc, [el.name]: el.value } 
-  : acc, 
-  {});
+  const formElements = [...contactsForm.elements]; 
+  const getValues = ({ elements }) => [...elements].reduce(
+    (acc, el) => ['INPUT', 'TEXTAREA'].includes(el.tagName) 
+    ? { ...acc, [el.name]: el.value } 
+    : acc, 
+    {});
 
-const clearValues = ({ elements }) => [...elements].forEach(el => {
-  el.value = "";
-});
+  const clearValues = ({ elements }) => [...elements].forEach(el => {
+    el.value = "";
+  });
 
-const enableLoading = () => {
-  contactSuccessMessage.style.display = 'none';
-  contactFailureMessage.style.display = 'none';
-  submitButton.classList.add('loading');
-  buttonSpinner.style.display = 'inline-block';
-  buttonText.style.display = 'none';
-  submitButton.disabled = true;
-};
+  const enableLoading = () => {
+    contactSuccessMessage.style.display = 'none';
+    contactFailureMessage.style.display = 'none';
+    submitButton.classList.add('loading');
+    buttonSpinner.style.display = 'inline-block';
+    buttonText.style.display = 'none';
+    submitButton.disabled = true;
+  };
 
-const disableLoading = () => {
-  submitButton.classList.remove('loading');
-  buttonText.style.display = 'inline';
-  buttonSpinner.style.display = 'none';
-  submitButton.disabled = false;
-};
+  const disableLoading = () => {
+    submitButton.classList.remove('loading');
+    buttonText.style.display = 'inline';
+    buttonSpinner.style.display = 'none';
+    submitButton.disabled = false;
+  };
 
-const sendSuccess = () => {
-  submitButton.style.display = 'none';
-  contactSuccessMessage.style.display = 'inline';
-};
+  const sendSuccess = () => {
+    submitButton.style.display = 'none';
+    contactSuccessMessage.style.display = 'inline';
+  };
 
-const sendFailure = () => {
-  disableLoading();
-  contactFailureMessage.style.display = 'inline';
-};
+  const sendFailure = () => {
+    disableLoading();
+    contactFailureMessage.style.display = 'inline';
+  };
 
-contactsForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const values = getValues(e.target);
-  enableLoading();
-  console.log(values);
-  setTimeout(() => {
-    // sendSuccess();
-    sendFailure();
-    clearValues(e.target);
-  }, 1000);
+  contactsForm.addEventListener('submit', e => {
+    e.preventDefault();
+    enableLoading();
+    const values = getValues(e.target);
+    emailjs.send('mailgun', 'template_cgrVGF1E', values)
+      .then(res => {
+        console.log('Success');
+        clearValues(e.target);
+        sendSuccess();
+      })
+      .catch(err => {
+        console.error(err);
+        sendFailure();
+      });
+  });
+  
 });
